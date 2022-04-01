@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link href="/css/screen.css" rel="stylesheet" />
+    <title>Basket Ball Counter with BLE</title>
+    >
+    <script src="https://qtlearncodelab.github.io/qtpi-shared/qad/js/releases/latest/p5.min.js"></script>
+    <script
+      defer
+      src="https://qtlearncodelab.github.io/qtpi-shared/qtwc/js/releases/latest/qtwc.js"
+    ></script>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <qt-board-ble
+      id="board"
+      ccs="true"
+      board-name="ble-bbc"
+      board-type="qtneo"
+      service-uuid="1011"
+    ></qt-board-ble>
+
+    <qt-apds id="apds1" onData="gotData"></qt-apds>
+    <qt-buzzer id="buzzer1"></qt-buzzer>
+    <script defer src="sketch.js"></script>
+    <script defer src="qtlogic.js"></script>
+  </body>
+</html>
